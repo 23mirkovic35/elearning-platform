@@ -1,0 +1,29 @@
+:host {
+  .custom-input {
+    position: relative;
+
+    &__input,
+    &__label {
+      padding: 5px;
+    }
+
+    &__input {
+      outline: none;
+
+      &:focus + .custom-input__label {
+        top: -5px;
+        left: 10px;
+        background-color: white;
+        padding: 0 5px;
+        font-size: 12px;
+      }
+    }
+
+    &__label {
+      position: absolute;
+      top: 0;
+      left: 5px;
+      transition: all 0.3s;
+    }
+  }
+}
