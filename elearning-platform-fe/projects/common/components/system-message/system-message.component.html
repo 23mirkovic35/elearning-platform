@@ -1,0 +1,18 @@
+<div
+  class="system-message"
+  [ngClass]="{
+    'system-message--error': message.type === MESSAGE_TYPE.ERROR,
+    'system-message--warning': message.type === MESSAGE_TYPE.WARNING,
+    'system-message--success': message.type === MESSAGE_TYPE.SUCCESS
+  }"
+>
+  <div class="system-message__icon">
+    <elearning-platform-icon [name]="message.type"></elearning-platform-icon>
+  </div>
+  <label class="system-message__text">
+    {{ message.text }}
+  </label>
+  <button class="system-message__close" (click)="onClose($event)">
+    <elearning-platform-icon [name]="'close'"></elearning-platform-icon>
+  </button>
+</div>

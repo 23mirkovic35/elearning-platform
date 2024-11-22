@@ -1,0 +1,47 @@
+:host {
+  .system-message {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 5px 0;
+    animation: showMessage 0.3s linear;
+
+    &__icon,
+    &__close {
+      width: 12.5%;
+    }
+
+    &__text {
+      font-family: "Poppins", sans-serif;
+      width: 75%;
+      color: white;
+    }
+
+    &__close {
+      outline: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    &--error {
+      background-color: #e14a4a;
+    }
+
+    &--warning {
+      background-color: orange;
+    }
+
+    &--success {
+      background-color: #39b235;
+    }
+  }
+}
+@keyframes showMessage {
+  0% {
+    transform: translateY(-5px);
+  }
+}

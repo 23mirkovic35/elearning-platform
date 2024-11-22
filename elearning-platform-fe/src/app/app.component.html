@@ -1,1 +1,7 @@
-<elearning-platform-custom-input></elearning-platform-custom-input>
+<!-- <elearning-platform-custom-input></elearning-platform-custom-input> -->
+<ng-container *ngFor="let message of messages; let i = index">
+  <elearning-platform-system-message
+    [message]="message"
+    (close)="onClose($event)"
+  ></elearning-platform-system-message>
+</ng-container>

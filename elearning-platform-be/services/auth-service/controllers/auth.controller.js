@@ -3,7 +3,8 @@ const user = require("../models/User.js");
 
 class UserController {
   login = (req, res) => {
-    console.log(req);
+    const { username, password } = req.body;
+    console.log(username, password);
   };
 
   signup = (req, res) => {
